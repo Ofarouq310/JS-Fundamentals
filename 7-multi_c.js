@@ -1,7 +1,7 @@
 const arg = process.argv[2];
 const x = parseInt(arg, 10);
 
-if (isNaN(x)) {
+if (isNaN(x) || x < 1) {
   console.log("Missing number of occurrences");
   process.exit(0);
 }
