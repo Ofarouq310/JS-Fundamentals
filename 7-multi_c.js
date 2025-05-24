@@ -2,7 +2,7 @@ const arg = process.argv[2];
 const x = parseInt(arg, 10);
 
 if (isNaN(x) || x < 1) {
-  console.log(" ");
+  console.log("");
   process.exit(0);
 }
 
