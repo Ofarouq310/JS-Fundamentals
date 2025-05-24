@@ -1,10 +1,20 @@
-const input = prompt("Enter arguments separated by spaces:");
-const args = input ? input.trim().split(/\s+/) : [];
+const readline = require('readline');
 
-if (args.length === 0 || args[0] === "") {
-  console.log("No argument");
-} else if (args.length === 1) {
-  console.log("Argument found");
-} else {
-  console.log("Arguments found");
-}
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question("Enter arguments separated by spaces: ", function(input) {
+  const args = input.trim().split(/\s+/);
+
+  if (args.length === 0 || args[0] === "") {
+    console.log("No argument");
+  } else if (args.length === 1) {
+    console.log("Argument found");
+  } else {
+    console.log("Arguments found");
+  }
+
+  rl.close();
+});
